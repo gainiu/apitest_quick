@@ -38,7 +38,7 @@ if __name__ == "__main__":
         for case_num in range(case_numbers):
             data = InitData(datafile, case_num)
             data.get_data()
-            # 创建测试类
+            # 每一行用例生成一个测试类
             newTestCase = type(data.case_module, (unittest.TestCase,), {
                                'data': data, 'title': data.case_name, 'temporary_data': temporary_data, 'tearDown': base_run.teardown, 'setUp': base_run.setup, data.case_id: base_run.test_case},)
             # 测试类加入unittest套件
