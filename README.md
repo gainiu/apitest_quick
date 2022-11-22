@@ -129,42 +129,6 @@ def read_xlrd(excel_file):
         raise
     return datafile
 
-class InitData():
-    '''初始化excel数据'''
-    def __init__(self,datafile,case_no):
-        #case_no用例编号索引
-        #datafile所有用例数据
-        self.datafile=datafile
-        self.case_id=[]
-        self.case_module=[]
-        self.case_name=[]
-        self.username=[]
-        self.password=[]
-        self.method=[]
-        self.url_path=[]
-        self.api_type=[]
-        self.headers=[]
-        self.request_body=[]
-        self.status_code=[]
-        self.resp_expect=[]
-        self.resp_current=[]
-        self.case_no=case_no
-
-    def get_data(self):
-        #获取某条用例的所有字段值
-        self.case_id=self.datafile[self.case_no][0]
-        self.case_module=self.datafile[self.case_no][1]
-        self.case_name=self.datafile[self.case_no][2]
-        self.username=self.datafile[self.case_no][3]
-        self.password=self.datafile[self.case_no][4]
-        self.method=self.datafile[self.case_no][5]
-        self.url_path=self.datafile[self.case_no][6]
-        self.api_type=self.datafile[self.case_no][7]
-        self.headers=self.datafile[self.case_no][8]
-        self.request_body=self.datafile[self.case_no][9]
-        self.status_code=self.datafile[self.case_no][10]
-        self.resp_expect=self.datafile[self.case_no][11]
-        self.resp_current=self.datafile[self.case_no][12]
 ```
 request_func.py
 
